@@ -18,6 +18,9 @@ function createWindow() {
   win.maximize();
   // Carrega a URL definida no config.json
   win.loadURL(config.url);
+  win.webContents.session.clearCache().then(() => {
+    win.webContents.reloadIgnoringCache();
+  });
 }
 
 app.whenReady().then(() => {
