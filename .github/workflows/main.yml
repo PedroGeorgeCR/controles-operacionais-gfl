@@ -35,4 +35,5 @@ jobs:
           name: ControlesOperacionaisGFL
           path: |
             dist/
-            **/*.exe
+            dist/**/*.exe
+            dist/win-unpacked/**/*.exe
