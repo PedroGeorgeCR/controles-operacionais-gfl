@@ -12,6 +12,7 @@ function createWindow() {
     }
   });
 
+  win.setMenuBarVisibility(false);
   win.maximize();
   // Carrega a URL definida no config.json
   win.loadURL(config.url);
