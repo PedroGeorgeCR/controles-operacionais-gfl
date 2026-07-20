@@ -13,11 +13,13 @@ function createWindow() {
     }
   });
 
-  win.setMenu(null);
-  win.setMenuBarVisibility(false);
+  win.removeMenu();
   win.maximize();
   // Carrega a URL definida no config.json
   win.loadURL(config.url);
+  win.webContents.on('did-finish-load', () => {
+    win.setTitle("Controles Operacionais GFL");
+  });
   win.webContents.session.clearCache().then(() => {
     win.webContents.reloadIgnoringCache();
   });
