@@ -1,0 +1,27 @@
+{
+  "name": "controles-operacionais-gfl",
+  "version": "1.0.0",
+  "description": "Controles Operacionais GFL",
+  "main": "main.js",
+  "author": "Pedro George",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "br.com.pedrogeorge.controles",
+    "productName": "Controles Operacionais GFL",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    }
+  }
+}
